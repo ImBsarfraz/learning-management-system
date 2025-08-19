@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const courseProgressApi = createApi({
     reducerPath: "courseProgressApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:4000/api/v1/progress",
+        baseUrl: "https://learning-management-system-ufay.onrender.com/api/v1/progress",
         credentials: "include",
     }),
     endpoints: (builder) => ({

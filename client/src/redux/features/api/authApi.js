@@ -3,7 +3,7 @@ import { userLoggedIn, userLoggedOut } from "../authSlice";
 export const authApi = createApi({
     reducerPath: "authApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:4000/api/v1/user/",
+        baseUrl: "https://learning-management-system-ufay.onrender.com/api/v1/user/",
         credentials: "include"
     }),
 

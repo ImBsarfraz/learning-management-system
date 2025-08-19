@@ -4,7 +4,7 @@ export const courseApi = createApi({
     reducerPath: "courseApi",
     tagTypes: ["Instructor Course", "Lecture"],
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:4000/api/v1/course",
+        baseUrl: "https://learning-management-system-ufay.onrender.com/api/v1/course",
         credentials: "include"
     }),
     endpoints: (builder) => ({

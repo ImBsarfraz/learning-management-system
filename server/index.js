@@ -24,8 +24,9 @@ const _dirname = path.resolve();
 // middlewares
 app.use(express.json());
 app.use(cookieParser());
+// "http://localhost:5173"
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://learning-management-system-ufay.onrender.com",
     credentials: true,
 }));
 
