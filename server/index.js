@@ -30,7 +30,7 @@ app.use(cors({
     credentials: true,
 }));
 
-const SERVER = process.env.PORT;
+const SERVER = process.env.PORT || 4000;
 
 // apis
 app.use("/api/v1/user", userRoutes);
@@ -50,6 +50,7 @@ app.get("/*splat", (_, res) => {
 
 // error handler middleware 
 app.use(errorHandler);
+
 
 app.listen(SERVER, () => {
     console.log(`SERVING ON LOCALHOST: ${SERVER}`);

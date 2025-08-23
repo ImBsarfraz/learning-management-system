@@ -3,21 +3,21 @@ import { userLoggedIn, userLoggedOut } from "../authSlice";
 export const authApi = createApi({
     reducerPath: "authApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://learning-management-system-ufay.onrender.com/api/v1/user/",
+        baseUrl: "/api/v1",
         credentials: "include"
     }),
 
     endpoints: (builder) => ({
         registerUser: builder.mutation({
             query: (inputData) => ({
-                url: "register",
+                url: "/user/register",
                 method: "POST",
                 body: inputData
             })
         }),
         loginUser: builder.mutation({
             query: (inputData) => ({
-                url: "login",
+                url: "/user/login",
                 method: "POST",
                 body: inputData,
             }),
@@ -34,7 +34,7 @@ export const authApi = createApi({
         }),
         logoutUser: builder.mutation({
             query: () => ({
-                url: "logout",
+                url: "/user/logout",
                 method: "GET",
             }),
             async onQueryStarted(_, { queryFulfilled, dispatch }) {
@@ -49,7 +49,7 @@ export const authApi = createApi({
         }),
         loadUser: builder.query({
             query: () => ({
-                url: "profile",
+                url: "/user/profile",
                 method: "GET"
             }),
             async onQueryStarted(_, { queryFulfilled, dispatch }) {
@@ -65,7 +65,7 @@ export const authApi = createApi({
         }),
         updateUser: builder.mutation({
             query: (formData) => ({
-                url: "profile/update",
+                url: "/user/profile/update",
                 method: "PUT",
                 body: formData,
                 credentials: "include",
