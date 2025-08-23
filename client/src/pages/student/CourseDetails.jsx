@@ -28,7 +28,7 @@ const CourseDetails = () => {
     }
 
     return (
-        <div className='space-y-5'>
+        <div className='space-y-5 p-4'>
             <div className='bg-[#2D2F31] dark:bg-cyan-950 text-white'>
                 <div className='max-w-7xl mx-auto py-8 px-4 md:px-0 flex-col gap-2'>
                     <h1 className='font-bold text-2xl md:text-3xl'>{course?.title}</h1>
